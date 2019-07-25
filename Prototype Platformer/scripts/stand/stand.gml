@@ -41,7 +41,6 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 				break
 			}
 			found_object = true
-			break
 		}
 		if !fail && found_object{
 			mask_index = temp_mask

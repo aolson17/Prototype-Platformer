@@ -5,4 +5,6 @@ if !place_meeting(x,y+1,par_solid){ // Apply gravity
 }else{ // Apply Friction
 	xsp *= .9
 }
+x = round(x)
+y = round(y)
 scr_collision()
