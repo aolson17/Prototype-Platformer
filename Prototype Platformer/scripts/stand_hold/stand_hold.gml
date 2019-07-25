@@ -25,8 +25,8 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 	}
 	
 	if obj_control.use_key_pressed{ // Try to put down
-		if !place_meeting(x+face*18,y,par_solid){
-			instance_create_layer(x+face*17,y-5,"Instances",holding)
+		if !place_meeting(x+face*14,y,par_solid){
+			instance_create_layer(x+face*15,y-5,"Instances",holding)
 			holding = false
 			state = set_down
 		}

@@ -51,6 +51,9 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 		mask_index = temp_mask
 	}
 	
+	x = round(x)
+	y = round(y)
+	
 	if xsp != 0{
 		state = run
 	}
