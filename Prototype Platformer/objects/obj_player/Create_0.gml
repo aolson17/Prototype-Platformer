@@ -11,6 +11,7 @@ max_run_speed = 3
 
 hold_speed = .2
 max_hold_speed = 2
+max_hold_speed = 3
 
 air_move_factor = .2
 
