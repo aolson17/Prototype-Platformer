@@ -1,5 +1,5 @@
 
-move = keyboard_check(ord("D"))-keyboard_check(ord("A"))
+move = obj_control.right_key - obj_control.left_key
 
 if state = pick_up{
 	x_offset = face*5 // Where to draw what's being held
@@ -56,7 +56,7 @@ if !place_meeting(x,y+1,par_solid){ // Apply gravity
 	
 	jumping = false
 	if state != die{
-		if keyboard_check_pressed(vk_space){ // Jump
+		if obj_control.jump_key_pressed{ // Jump
 			ysp += -jump_speed
 			jumping = true
 		}

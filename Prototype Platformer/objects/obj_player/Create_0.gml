@@ -20,10 +20,6 @@ holding_image_speed_factor = .2
 
 jumping = false
 
-pickup_range = 3
-pickup_key = ord("E")
-throw_key = mb_left
-
 holding = false // Set to the object index of whats being held
 
 xsp = 0

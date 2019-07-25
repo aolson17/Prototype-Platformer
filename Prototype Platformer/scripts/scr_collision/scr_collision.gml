@@ -9,9 +9,9 @@ if place_meeting((x+xsp),(y),par_solid){
 	}
 	var dis = xsp
 	var limit = abs(xsp)
-	while(!place_meeting(round(x+sign(xsp)*.01),round(y),par_solid) && limit > 0){
+	while(!place_meeting(round(x+sign(xsp)),round(y),par_solid) && limit > 0){
 		show_debug_message("while x 1")
-		//x += sign(xsp)*.01
+		x += sign(xsp)*.01
 		dis -= sign(xsp)*.01
 		limit -= abs(xsp)*.01
 	}
