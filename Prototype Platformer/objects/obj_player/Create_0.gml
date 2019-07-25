@@ -14,6 +14,7 @@ max_hold_speed = 2
 max_hold_speed = 3
 
 air_move_factor = .2
+air_move_factor = .5
 
 jump_speed = 5
 variable_jump_factor = .5
