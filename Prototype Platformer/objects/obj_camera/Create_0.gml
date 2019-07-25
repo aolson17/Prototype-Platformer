@@ -1,8 +1,8 @@
 
-width = 320
-height = 180
+width = 384
+height = 216
 
-spd_factor = .1
+spd_factor = .2
 
 if instance_number(obj_camera_block)>0{
 	x = obj_camera_block.x
