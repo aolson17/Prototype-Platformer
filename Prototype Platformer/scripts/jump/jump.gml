@@ -17,7 +17,7 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 		image_speed = 0
 	}
 	if holding != false{
-		if keyboard_check_released(pickup_key){ // Throw Block Up
+		if obj_control.use_key_pressed{ // Throw Block Up
 			if !place_meeting(x,y-1,par_solid){
 				var obj = instance_create_layer(x,y-19,"Instances",holding)
 				obj.xsp = xsp

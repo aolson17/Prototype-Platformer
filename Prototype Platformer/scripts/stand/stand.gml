@@ -27,7 +27,7 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 		image_speed = .5
 	}
 	
-	if keyboard_check_released(pickup_key){
+	if obj_control.use_key_pressed{
 		var temp_mask = mask_index
 		mask_index = spr_player_mask_hold
 		var list = ds_list_create()

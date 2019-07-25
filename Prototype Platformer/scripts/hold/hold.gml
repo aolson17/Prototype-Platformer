@@ -19,7 +19,7 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 		state = stand_hold
 	}
 	
-	if keyboard_check_released(pickup_key){ // Try to put down
+	if obj_control.use_key_pressed{ // Try to put down
 		if !place_meeting(x+face*20,y-10,par_solid){
 			var obj = instance_create_layer(x+face*19,y-15,"Instances",holding)
 			obj.xsp = xsp+face*(1.5)

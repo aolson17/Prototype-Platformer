@@ -24,7 +24,7 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 		image_speed = .5
 	}
 	
-	if keyboard_check_released(pickup_key){ // Try to put down
+	if obj_control.use_key_pressed{ // Try to put down
 		if !place_meeting(x+face*18,y,par_solid){
 			instance_create_layer(x+face*17,y-5,"Instances",holding)
 			holding = false
