@@ -20,6 +20,11 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 	if ysp <= 0{
 		state = jump
 	}
+	
+	if holding = false && place_meeting(x,y,obj_ladder)&&(obj_control.up_key || obj_control.down_key){
+		ysp = 0
+		state = ladder
+	}
 }else{ // If on ground
 	if holding != false{
 		if xsp = 0{

@@ -4,10 +4,11 @@ grav_speed = .3
 run_speed = .2
 max_run_speed = 2.5
 max_run_speed = 3
-
 hold_speed = .2
 max_hold_speed = 2
 max_hold_speed = 3
+
+max_stair_speed = 6
 
 air_move_factor = .2
 air_move_factor = .5
@@ -19,9 +20,12 @@ move_friction = .4
 
 run_image_speed_factor = .4 // How much run speed effects the animation speed
 holding_image_speed_factor = .4
+ladder_image_speed_factor = .2
 
 run_image_speed_factor = .5 // How much run speed effects the animation speed
 holding_image_speed_factor = .5
+
+step_size = 1
 
 jumping = false
 

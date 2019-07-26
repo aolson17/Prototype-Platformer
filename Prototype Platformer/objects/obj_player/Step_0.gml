@@ -42,15 +42,25 @@ if move = sign(xsp){ // If trying to move in the same direction as momentum
 	xsp += move * move_speed
 }
 
-if !place_meeting(x,y+1,par_solid){ // Apply gravity
+if !place_meeting(x,y+1,par_solid) && state != ladder{ // Apply gravity
 	ysp += grav_speed
-}else{ // If on ground
+}else{ // If on ground or ladder
 	
-	if (move != sign(xsp) || abs(xsp) > max_move_speed){ // Apply friction
-		if abs(xsp) - move_friction > 0{
-			xsp -= sign(xsp)*move_friction
+	if state = ladder{
+		if obj_control.down_key{
+			ysp = 1
+		}else if obj_control.up_key{
+			ysp = -1
 		}else{
-			xsp = 0
+			ysp = 0
+		}
+	}else{
+		if (move != sign(xsp) || abs(xsp) > max_move_speed){ // Apply friction
+			if abs(xsp) - move_friction > 0{
+				xsp -= sign(xsp)*move_friction
+			}else{
+				xsp = 0
+			}
 		}
 	}
 	
@@ -59,6 +69,7 @@ if !place_meeting(x,y+1,par_solid){ // Apply gravity
 		if obj_control.jump_key_pressed{ // Jump
 			ysp += -jump_speed
 			jumping = true
+			state = jump
 		}
 		
 		if move != 0{ // Set the facing of the player

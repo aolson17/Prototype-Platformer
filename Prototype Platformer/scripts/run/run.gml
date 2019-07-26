@@ -17,6 +17,12 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 	}
 }else{ // If on ground
 	
+	if place_meeting(x,y,obj_ladder)&&(obj_control.up_key){
+		y -= 1 // Move off the ground a bit
+		ysp = 0
+		state = ladder
+	}
+	
 	if xsp = 0 && move = 0{
 		state = stand
 	}

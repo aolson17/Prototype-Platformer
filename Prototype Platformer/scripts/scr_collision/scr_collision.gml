@@ -1,32 +1,37 @@
 
 if place_meeting((x+xsp),(y),par_solid){
 	var col = instance_place((x+xsp),(y),par_solid)
-	if col.xsp != 0 || col.ysp != 0{
-		//col.xsp = 0
-		//col.ysp = 0
-		//xsp = 0
-		//ysp = 0
-	}
-	var dis = xsp
+	var dis = (xsp)
 	var limit = abs(xsp)
 	while(!place_meeting((x+sign(xsp)),(y),par_solid) && limit >= 0){
 		//show_debug_message("while x 1")
 		x += sign(xsp)
-		dis -= sign(xsp)
+		//dis -= sign(xsp)
 		limit -= abs(xsp)
 	}
-	xsp = 0
+	if object_index = obj_player && move = sign(xsp) && (state = run || state = hold){
+		// Step up
+		while (!place_meeting((x+sign(xsp)),(y-step_size),par_solid) && limit > 0){
+			y -= step_size
+			ysp = 0
+			//var limit = abs(dis)
+			while(!place_meeting((x+sign(dis)),(y),par_solid) && abs(dis) > 0 && limit > 0){
+				//show_debug_message("while x 2")
+				x += sign(dis)
+				//dis -= sign(dis)
+				limit -= abs(sign(dis))
+			}
+			
+			
+		}
+	}else{
+		xsp = 0
+	}
 }else{
 	x += xsp
 }
 if place_meeting((x),(y+ysp),par_solid){
 	var col = instance_place((x),(y+ysp),par_solid)
-	if col.xsp != 0 || col.ysp != 0{
-		//col.xsp = 0
-		//col.ysp = 0
-		//xsp = 0
-		//ysp = 0
-	}
 	var limit = abs(ysp)
 	while(!place_meeting((x),(y+sign(ysp)),par_solid) && limit >= 0){
 		//show_debug_message("while y")

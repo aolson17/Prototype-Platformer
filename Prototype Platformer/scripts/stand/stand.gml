@@ -51,6 +51,12 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 		mask_index = temp_mask
 	}
 	
+	if place_meeting(x,y,obj_ladder)&&(obj_control.up_key){
+		y -= 1
+		ysp = 0
+		state = ladder
+	}
+	
 	x = round(x)
 	y = round(y)
 	
