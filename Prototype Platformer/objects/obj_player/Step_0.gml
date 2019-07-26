@@ -48,7 +48,7 @@ if !place_meeting(x,y+1,par_solid) && state != ladder{ // Apply gravity
 	
 	if state = ladder{
 		if obj_control.down_key{
-			ysp = 1
+			ysp = 2
 		}else if obj_control.up_key{
 			ysp = -1
 		}else{
