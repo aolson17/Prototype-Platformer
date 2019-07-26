@@ -11,7 +11,7 @@ if prev_state != state{
 }
 prev_state = state
 
-x = instance_nearest(x,y,obj_ladder).x+6
+x = instance_nearest(x,y,obj_ladder).x
 xsp = 0
 
 if place_meeting(x,y+1,par_solid){ // If on ground
@@ -27,6 +27,11 @@ if place_meeting(x,y+1,par_solid){ // If on ground
 		}else {
 			state = run
 		}
+	}
+}else{ // If in air
+	if !place_meeting(x,y,obj_ladder){ // If ran out of ladder
+		state = jump
+		ysp -= 2
 	}
 }
 

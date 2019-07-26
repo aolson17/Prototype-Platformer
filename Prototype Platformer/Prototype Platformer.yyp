@@ -567,6 +567,14 @@
             }
         },
         {
+            "Key": "e4c4b8f7-695b-4e4e-bbb5-d6bb2f7b3d18",
+            "Value": {
+                "id": "6ec440c3-0996-4b28-9263-1b942d54ba5a",
+                "resourcePath": "sprites\\spr_ladder\\spr_ladder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ebd5fea3-c08f-441e-94b8-ce236a087863",
             "Value": {
                 "id": "ffb8dcb5-d885-4b5e-83fe-dde7cb59c936",
