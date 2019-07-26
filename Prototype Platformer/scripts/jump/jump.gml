@@ -23,6 +23,8 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 				obj.xsp = xsp
 				obj.ysp = -3
 				holding = false
+				var sound = audio_play_sound(snd_box_toss,0,0)
+				audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
 			}
 		}
 	}

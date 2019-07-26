@@ -27,6 +27,8 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 			mask_index = spr_player_mask
 			holding = false
 			state = set_down
+			var sound = audio_play_sound(snd_box_toss,0,0)
+			audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
 		}
 	}
 	

@@ -47,6 +47,8 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 			holding = col.object_index
 			state = pick_up
 			instance_destroy(col)
+			var sound = audio_play_sound(snd_pickup,0,0)
+			audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
 		}
 		mask_index = temp_mask
 	}
