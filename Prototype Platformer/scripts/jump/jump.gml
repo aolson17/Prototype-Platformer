@@ -19,7 +19,7 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 	if holding != false{
 		if obj_control.use_key_pressed{ // Throw Block Up
 			if !place_meeting(x,y-1,par_solid){
-				var obj = instance_create_layer(x,y-19,"Instances",holding)
+				var obj = instance_create_layer(x,y-19,"Blocks",holding)
 				obj.xsp = xsp
 				obj.ysp = -3
 				holding = false
